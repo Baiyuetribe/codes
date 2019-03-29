@@ -3,7 +3,7 @@
 安装教程：
 
 ```
-wget https://github.com/Baiyuetribe/codes/blob/master/tieba-cloud-autosign/docker-compose.yml
+wget https://raw.githubusercontent.com/Baiyuetribe/codes/master/tieba-cloud-autosign/docker-compose.yml
 docker-compose up -d
 ```
 
