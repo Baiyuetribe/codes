@@ -3,6 +3,7 @@
 安装教程：
 
 ```
+mkdir tieba && cd tieba
 wget https://raw.githubusercontent.com/Baiyuetribe/codes/master/tieba-cloud-autosign/docker-compose.yml
 docker-compose up -d
 ```
