@@ -1,15 +1,3 @@
-> 
-
-```
-docker run -d -p 10002:80 --name kodexplorer -v "$PWD":/var/www/html yangxuan8282/kodexplorer
-```
-
-然后打开浏览器，访问http://ip:10002 就可以进入了。如需替换端口，请修改`10002`端口值就行。
-
-> "$PWD" :特指当面运行目录
->
-> -v：代办挂载文件目录
-
 ## KodExplorer文件管理
 
 ## 适用于容器管理、开发及私有云搭建
