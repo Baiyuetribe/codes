@@ -1,9 +1,9 @@
 FROM php:7.3.4-zts-alpine3.9 
 MAINTAINER azure <https://baiyue.one>
 
-# 鉴于现有版本比较成就，官方更新很多bug，因此定制一份最新版4.3.8
-ENV KODEXPLORER_VERSION=4.3.8
-ENV KODEXPLORER_URL="https://github.com/kalcaddle/KodExplorer/archive/4.38.tar.gz"
+# 鉴于现有版本比较成就，官方更新很多bug，因此定制一份最新版4.4.0
+ENV KODEXPLORER_VERSION=4.4.0
+ENV KODEXPLORER_URL="https://cloud.baiyue.one/?/Blog_code/kodexplorer4.40.tar.gz"
 
 # base镜像内核升级和程序部署
 RUN set -x \
