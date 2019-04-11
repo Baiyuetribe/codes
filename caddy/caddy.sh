@@ -78,29 +78,30 @@ check_sys(){
 
 # 开始安装caddy
 install_caddy(){
-    wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh
+    bash <(curl -L -s https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh)
 }
 
 # 该配置会自动部署ssl证书，前提是域名已解析成功
 caddy_set(){
-    wight "请输入域名：示例baiyue.one或www.baiyue.one"
+    green "请输入域名：示例baiyue.one或www.baiyue.one"
     redbg "注意：域名必须已解析生效，否则会导致申请证书失败"
     read -p "请输入域名：" domain
-    wight "代理端口；示例888"
+    greenbg "代理端口；示例888"
     read -p "请输入代理端口：" port
-    redbg "填写邮箱，用于自动申请证书"
+    greenbg "填写邮箱，用于自动申请证书"
     read -p "邮箱地址" email
     echo "$domain {
     gzip
     tls $email
     proxy / 127.0.0.1:$port
     }" > /usr/local/caddy/Caddyfile
-    echo 
+    echo
+    sleep 6s 
     green "=================================================="
-    green "恭喜你，已完成域名反代设置，现在可以通过域名直接访问了"
-    green "新增站点地址:"
-    green "https://$domain"
+    green "恭喜您，已完成域名反代设置，现在可以通过域名直接访问了"
     green ""
+    white "https://$domain"
+    green "被代理端口：$port"
     green "备注：域名由caddy反代，自动申请ssl证书，到期自动续期"
     green "=================================================="
 }
@@ -146,7 +147,7 @@ start_menu(){
   ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝ ╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝                                                            
     "
     greenbg "==============================================================="
-    greenbg "简介：caddy域名反代一键脚本                                      "
+    greenbg "简介：Caddy域名反代一键脚本                                      "
     greenbg "系统：适用于Centos、Ubuntu、Debian等                             "
     greenbg "作者：Azure                                                     "
     greenbg "网站： https://baiyue.one                                       "
@@ -154,6 +155,7 @@ start_menu(){
     greenbg "Youtube/B站： 佰阅部落                                          "
     greenbg "==============================================================="
     echo
+    yellow "使用前提：域名必须已解析生效，否则自动配置会失效"
     blue "备注：域名由caddy反代，自动申请ssl证书，到期自动续期"
     echo
     white "1.开始安装"
@@ -181,4 +183,3 @@ start_menu(){
 }
 
 start_menu
-
