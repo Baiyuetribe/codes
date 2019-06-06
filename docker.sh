@@ -60,8 +60,8 @@ start_menu(){
     echo
     echo -e "\033[0;33m  确认请按回车键Enter；否则按Ctrl+C退出 \033[0m"
     echo
-    read -p "是否继续？":" num
-    case "$num" in
+    read -p "是否继续？:" num
+    case "$num" in   
     *)
 	check_docker
     echo -e "\033[32m====================================\033[0m"	
@@ -72,3 +72,4 @@ start_menu(){
 }
 
 start_menu
+
