@@ -7,8 +7,4 @@ if [ "$1" = 'php' ] && [ "$(id -u)" = '0' ]; then
     chmod -R 777 /var/www/html/
 fi
 
-if [ ! -e '/var/www/html/index.php' ]; then
-    cp -a /usr/src/kodexplorer/* /var/www/html/
-fi
-
 exec "$@"
