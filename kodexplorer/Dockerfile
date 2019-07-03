@@ -1,4 +1,4 @@
-FROM php:7.3.4-zts-alpine3.9 
+FROM php:7.3.6-zts-alpine 
 MAINTAINER azure <https://baiyue.one>
 
 # 鉴于现有版本比较成就，官方更新很多bug，因此定制一份最新版4.4.0
@@ -23,7 +23,7 @@ RUN set -x \
   && apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev
 
 # 指定工作目录
-WORKDIR /var/www/html
+WORKDIR /code
 # 设置启动项
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/entrypoint.sh
@@ -32,5 +32,3 @@ EXPOSE 80
 
 ENTRYPOINT ["entrypoint.sh"]
 CMD [ "php", "-S", "0000:80", "-t", "/var/www/html" ]
-
-
