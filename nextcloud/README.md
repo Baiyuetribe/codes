@@ -12,6 +12,8 @@ NextCloud（[nextcloud.com](https://baiyue.one/部落跳转.html?url=http://next
 
 官网演示：[https://demo.nextcloud.com](https://baiyue.one/部落跳转.html?url=https://demo.nextcloud.com)
 
+> 新增两种部署方法：快速部署适合体验，长期或正式环境使用，请选择B方案（正式环境部署）
+
 ## A:快速部署（仅用于体验，数据无保留）
 
 **项目地址：**
