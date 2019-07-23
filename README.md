@@ -8,7 +8,7 @@
 ## 基础工具及环境：
 
 ```
-bash <(curl -L -s https://raw.githubusercontent.com/Baiyuetribe/codes/master/docker.sh)
+bash <(curl -L -s https://raw.githubusercontent.com/Baiyuetribe/codes/master/docker.sh)   #智能安装Docker环境
 ```
 
 ### 影视播放及下载
