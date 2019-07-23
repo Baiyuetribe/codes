@@ -62,7 +62,9 @@ check_docker() {
 check_docker_compose() {
 	if [ -x "$(command -v docker-compose)" ]; then
 		echo "docker-compose is installed"
-		# command
+        echo -e "\033[32m====================================\033[0m"	
+        echo -e "\033[32m 系统已存在Docker环境                        "
+        echo -e "\033[32m====================================\033[0m"
 	else
 		echo "Install docker-compose"
 		# command
@@ -102,7 +104,7 @@ start_menu(){
 	check_docker
     check_docker_compose
     echo -e "\033[32m====================================\033[0m"	
-    echo -e "\033[32m 恭喜，您已经完成docker的安装                        "
+    echo -e "\033[32m 恭喜，您已经完成docker环境的安装                        "
     echo -e "\033[32m====================================\033[0m"	
 	;;
     esac
