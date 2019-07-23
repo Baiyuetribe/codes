@@ -5,5 +5,11 @@
 
 分类：
 
+## 基础工具及环境：
+
+```
+bash <(curl -L -s https://raw.githubusercontent.com/Baiyuetribe/codes/master/docker.sh)
+```
+
 ### 影视播放及下载
 [人人影视](https://github.com/Baiyuetribe/rrshare_docker)
